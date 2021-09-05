@@ -1,22 +1,35 @@
 ﻿using System;
 
-namespace Harmonic_Number
+namespace Largest_number
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Harmonic Number Program");
-            double Num, harmonic = 0;
-            Console.Write("Enter Number For Harmonic sereis no. :");
-            Num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Largest Number in between Three Numbers Program");
+            int num1, num2, num3;
+            Console.Write("Enter The 1st number : ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter The 2st number : ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter The 3st number : ");
+            num3 = Convert.ToInt32(Console.ReadLine());
 
-            for (double i = 1; i <= Num; i++)
+            if (num1 > num2)
             {
-                harmonic = harmonic + (1 / i);
+                if (num1 > num3)
+                {
+                    Console.Write("Number one is the largest!\n");
+                }
+                else
+                {
+                    Console.Write("Number three is the largest!\n");
+                }
             }
-            Console.WriteLine("Harmonic Number of Number {0} is : {1}", Num, harmonic);
+            else if (num2 > num3)
+                Console.Write("Number two is the largest!\n");
+            else
+                Console.Write("Number three is the largest!\n");
         }
     }
 }
-
