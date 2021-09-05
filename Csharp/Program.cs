@@ -1,35 +1,23 @@
 ﻿using System;
 
-namespace Largest_number
+namespace Leap_Year
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Largest Number in between Three Numbers Program");
-            int num1, num2, num3;
-            Console.Write("Enter The 1st number : ");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter The 2st number : ");
-            num2 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter The 3st number : ");
-            num3 = Convert.ToInt32(Console.ReadLine());
+            int check_year;
+            Console.Write("Input an year : ");
+            check_year = Convert.ToInt32(Console.ReadLine());
 
-            if (num1 > num2)
-            {
-                if (num1 > num3)
-                {
-                    Console.Write("Number one is the largest!\n");
-                }
-                else
-                {
-                    Console.Write("Number three is the largest!\n");
-                }
-            }
-            else if (num2 > num3)
-                Console.Write("Number two is the largest!\n");
+            if ((check_year % 400) == 0)
+                Console.WriteLine("{0} is a leap year.\n", check_year);
+            else if ((check_year % 100) == 0)
+                Console.WriteLine("{0} is not a leap year.\n", check_year);
+            else if ((check_year % 4) == 0)
+                Console.WriteLine("{0} is a leap year.\n", check_year);
             else
-                Console.Write("Number three is the largest!\n");
+                Console.WriteLine("{0} is not a leap year.\n", check_year);
         }
     }
 }
