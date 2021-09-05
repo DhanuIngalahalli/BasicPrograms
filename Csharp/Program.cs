@@ -1,23 +1,30 @@
 ﻿using System;
 
-namespace swap_num
+namespace vowel_constant
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int num1, num2, temp;
-            Console.Write("Enter First Number : ");
-            num1 = int.Parse(Console.ReadLine());
-            Console.Write("Enter Second Number : ");
-            num2 = int.Parse(Console.ReadLine());
-            temp = num1;
-            num1 = num2;
-            num2 = temp;
-            Console.Write("\nAfter Swapping : ");
-            Console.Write("\nFirst Number : " + num1);
-            Console.Write("\nSecond Number : " + num2);
-            Console.Read();
+            char ch;
+
+            Console.WriteLine("Enter any character: ");
+            ch = Convert.ToChar(Console.ReadLine());
+
+
+            // Condition for vowel and consonant checking
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+            {
+
+                Console.WriteLine(ch + " is Vowel.");
+
+            }
+            else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+            {
+                Console.WriteLine(ch + " is Consonant.");
+            }
+
+            Console.ReadLine();
         }
     }
 }
