@@ -1,17 +1,25 @@
 ﻿using System;
 
-namespace Power_2
+namespace quot_remnd
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("enter the power");
-            int num = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i <= num; i++)
-            {
-                Console.WriteLine("2 to the power of {0} is" + Math.Pow(2, i), i);
-            }
-        }
-    }
+	class Program
+	{
+		static void Main(string[] args)
+		{
+
+			int x, y, quot, rem;
+			Console.Write("Enter first number:");
+			x = Convert.ToInt32(Console.ReadLine());
+
+			Console.Write("Enter second number:");
+			y = Convert.ToInt32(Console.ReadLine());
+
+			quot = x / y;
+			rem = x % y;
+
+			Console.WriteLine("Quotient is:" + quot);
+			Console.WriteLine("Remainder is:" + rem);
+
+		}
+	}
 }
