@@ -1,25 +1,23 @@
 ﻿using System;
 
-namespace quot_remnd
+namespace swap_num
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-
-			int x, y, quot, rem;
-			Console.Write("Enter first number:");
-			x = Convert.ToInt32(Console.ReadLine());
-
-			Console.Write("Enter second number:");
-			y = Convert.ToInt32(Console.ReadLine());
-
-			quot = x / y;
-			rem = x % y;
-
-			Console.WriteLine("Quotient is:" + quot);
-			Console.WriteLine("Remainder is:" + rem);
-
-		}
-	}
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, temp;
+            Console.Write("Enter First Number : ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter Second Number : ");
+            num2 = int.Parse(Console.ReadLine());
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+            Console.Write("\nAfter Swapping : ");
+            Console.Write("\nFirst Number : " + num1);
+            Console.Write("\nSecond Number : " + num2);
+            Console.Read();
+        }
+    }
 }
